@@ -1,15 +1,19 @@
-// In src/index.js 
+// In src/index.js
+const express = require("express");
+// *** ADD ***
+const v1Router = require("./v1/routes");
 
-const express = require("express"); 
-const app = express(); 
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-const PORT = process.env.PORT || 3002; 
-
-// For testing purposes 
-app.get("/", (req, res) => { 
-    res.send('{working}');
+// *** REMOVE ***
+app.get("/", (req, res) => {
+  res.send("<h2>It's Working!</h2>");
 });
 
-app.listen(PORT, () => { 
-    console.log(`API is listening on port ${PORT}`); 
+// *** ADD ***
+app.use("/api/v1", v1Router);
+
+app.listen(PORT, () => {
+  console.log(`API is listening on port ${PORT}`);
 });
