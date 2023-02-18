@@ -19,10 +19,10 @@
 # T
 
 
-|    COMPONENT     |    STATUS                       |     CONDITION                                                     |
-|------------------|---------------------------------|-------------------------------------------------------------------|
-|  DPC core        | Actual part covering device     | Working,TESTING INTERNALLY                                        |
-|  DPC full        | App when every component works  | Different components being TESTED individually , NOT YET COMPLETE |
-| DPC EXPERIMENTAL | DPC core + component            |  Current stage of DPC FULL when its partially working             |
+|    File          |    Location       |     Purpose                                                                                |
+|------------------|-------------------|--------------------------------------------------------------------------------------------|
+|  package.json    | package.json      | contains all packages,build script for the NODEjs,express app                              |
+|  vercel.json     |  vercel.json      |  contains versions,build and root so that a normal NODEjs,express app can work in VERCEL   |
+| index.js         | src/index.js      | index js file that is the base for any NODEjs,express app                                  |
 
 
